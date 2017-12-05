@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+     *{
+     	padding: 0;
+     	margin: 0;
+     	list-style: none;
+     	font-family: "Source Han Sans", 微软雅黑, "microsoft yahei", "HanHei SC", PingHei, "PingFang SC", sans-serif;
+     }
+     .head{
+     	height: 73px;
+     	min-width: 1280px;
+     	margin-bottom: 3px
+     }
+     .head_pic1{
+        float: left;
+        display:block;
+        padding:15px 0;
+     }
+     .header_ul1{
+     	display: block;
+     	margin-left: 50px;
+     	float: left
+     }
+     .header_ul1 li{
+     	line-height: 73px;
+     	float: left;
+     	margin-left: 20px;
+     }
+     .header_ul1 li:first-child{
+     	margin: 0
+     }
+     .head_pic1:hover,.header_ul1 li:hover{
+     	cursor: pointer;
+     	color: red;
+     	border-bottom: 3px solid red
+     }
+     .header_ul2_1{
+     	width: 22px;
+     	height:22px; 
+     }
+     .header_ul2{
+     	float: right;
+     	height: 73px;
+     }
+     .header_ul2 li{
+     	line-height: 76px;
+     	float: left;
+     	padding: 0 5px
+     }
+     .header_ul2 li:hover{
+     	color: red;
+     	cursor: pointer;
+     }
+     .cycle{
+     	font-size: 0
+     }
+     .cycle_wrap{
+     	width: 1280px;
+     	height: 487px;
+     	overflow: hidden;
+     	position: relative;
+     }
+     .cycle{
+     	width: 6400px;
+     	height: 487px;
+     	position: absolute;
+     	transition: all 2s;
+     	left: -1280px
+     }
+     .cycle_pic img{
+     	width: 1280px;
+     	height: 487px
+     }
+     .cycle_pic{
+     	float: left;
+     }
+     .content_list{
+     	height: 98px;
+     	background: #ff3030;
+     	min-width: 1280px;
+     }
+     .content_list li{
+     	background: url(http://www.sf-express.com/resource/images/index/pb-wrapper-line.png) no-repeat right center;
+     	float: left;
+     	width: 213px;
+     	line-height: 98px;
+     	text-align: center;
+     	color: white;
+     	font-size: 16px;
+     }
+     .content_list li:hover{
+     	cursor: pointer;
+     	color: #ff3030;
+     	background:white;
+     }
+     .content_list li:hover .content_list_1{
+     	background: url(http://www.sf-express.com/resource/images/index/smallBanner-icon-red.png);
+     }
+     .content_list li:hover .content_list_2{
+     	background: url(http://www.sf-express.com/resource/images/index/smallBanner-icon-red.png) 0 -38px;
+     }
+     .content_list_1{
+     	margin-right: 10px;
+     	display: inline-block;
+     	width: 31px;
+     	height: 31px;
+     	vertical-align: middle;
+     	background: url(http://www.sf-express.com/resource/images/index/smallBanner-icon.png);
+     }
+     .content_list_2{
+     	margin-right: 10px;
+     	display: inline-block;
+     	width: 31px;
+     	height: 31px;
+     	vertical-align: middle;
+     	background: url(http://www.sf-express.com/resource/images/index/smallBanner-icon.png) 0 -38px;
+     }
+     .middle_pic{
+     	min-width: 1280px;
+     	height: 400px;
+     	overflow: hidden;
+     	position: relative;
+     }
+     .middle_pic img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0
+     }
+     .middle_text{
+     	position: absolute;
+     	z-index: 1;
+     	left: 328px;
+     	top: 50px
+     }
+     .middle_text1{
+     	text-align: center
+     }
+     .middle_text1 h1{
+        color: #333
+     }
+     .middle_text1 p{
+     	font-size: 16px;
+     	font-weight: 100;
+     	margin-top: 20px
+     }
+     .middle_pic a{
+     	position: absolute;
+     	right: 0;
+     	z-index: 1;
+     	color: red;
+     	top: 110px
+     }
+     .middle_text2{
+     	min-width: 1280px;
+     	height: 172px;
+     	position: absolute;
+     	z-index: 1;
+     	top: 200px
+     }
+     .middle_text2 .mt_1,.mt_2,.mt_3,.mt_4,.mt_5{
+     	width: 282.5px;
+     	height: 100%;
+     }
+     .mt_1{
+     	background: url(http://www.sf-express.com/resource/images/index/cir-white.png) no-repeat top center;
+     	margin-left: 75px;
+     }
+     .mt_1 .cc{
+     	font-size: 20px;
+     	color: #dc1e32;
+     	font-weight: 100;
+     	padding-top: 63px
+     }
+     .mt_1 div{
+     	position: relative;
+     	top: 50px;
+     	text-align: center;
+     	z-index: 1
+     }
+     .mt_1 .sp{
+     	display: block;
+     	background: url(http://www.sf-express.com/.gallery/icon/red-t-img-1.png)no-repeat top center;
+     	width: 30px;
+     	height: 58px;
+     	position: absolute;
+     	left: 126px;
+     }
+     .mt_1:hover{
+     	cursor: pointer;
+     	background: url(http://www.sf-express.com/resource/images/index/cir-red.png)no-repeat top center;
+     }
+     .mt_1:hover .sp{
+     	background: url(http://www.sf-express.com/.gallery/icon/white-t-img-1.png)no-repeat;
+     }
+     .mt_1:hover .cc{
+     	color: white
+     }
+     .news_one h1{
+     	font-weight: 700;
+     }
+     .news_one{
+     	height: 81px;
+     	margin: 31px auto;
+     	text-align: center
+     }
+     .news_one p{
+     	font-size: 16px;
+     	margin-top: 20px;
+     }
+     .news{
+     	min-width: 1280px;
+     }
+     .news_one a{
+     	float: right;
+     	font-size: 16px;
+     	color: red;
+     	margin-top: -21px;
+     }
+     .news_two{
+     	height: 416px;
+     	min-width: 1280px;
+     }
+     .news_a{
+     	float: left;
+     	display: block;
+     	width: 300px;
+     	height: 318px;
+     	text-decoration: none;
+     	margin-right: 10px
+     }
+     .news_a h1{
+     	font-size: 20px;
+     	color: black;
+     	margin-top: 14px;
+     	font-weight: normal;
+     	margin-left: 20px;
+     }
+     .news_a p{
+     	margin-left: 20px;
+     	margin-top: 10px;
+     	font-size: 14px;
+     	color: black
+     }
+     .news_a:hover{
+     	background: #FF3030
+     }
+     .news_a:hover h1{
+     	color: white
+     }
+     .news_a:hover p{
+     	color: white
+     }
+     .news_a span{
+     	color: red;
+     }
+     .news_a:hover span{
+     	color: white
+     }
+     .foot{
+     	min-width: 1280px;
+     	height: 519px;
+     	background: black;
+     	border-top: 8px solid red
+     }
+     .foot_wrap{
+     	min-width: 1280px;
+     	height: 519px;
+     }
+     .foot_div{
+     	padding: 50px 0;
+     	color: white;
+     	height: 231px;
+     }
+     .foot_div li{
+     	cursor: pointer;
+     }
+     .foot_div ul{
+     	float: left;
+     	margin-right: 38px
+     }
+     .list_a_1{
+     	margin-bottom: 10px
+     }
+     .list_a_2,.list_a_3,.list_a_4{
+     	color: #b1b1b1;
+     	font-size: 14px;
+     	margin-top: 10px
+     }
+     .foot_8{
+     	height: 231px;
+     	padding-right: 40px;
+     	border-right: 1px solid #333
+     }
+     .list_div{
+     	text-align: center;
+     	float: right;
+     }
+     .list_div h1{
+     	font-size: 16px;
+     }
+     .list_div2{
+     	width: 400px;
+     	height: 61px;
+     	margin-top: 50px;
+     	background: url(http://www.sf-express.com/resource/images/index/label-top-r-btn.png)no-repeat top center;
+     }
+     .last_foot{
+     	height: 73px;
+     	min-width: 1280px;
+     	border-top: 1px solid #333;
+     	border-bottom: 1px solid #333;
+     	padding: 14px 0;
+     	box-sizing: border-box;
+     }
+     .last_foot li{
+     	float: left;
+     	width: 127px;
+     	height: 43px;
+     	border-right: 1px solid #333;
+     	background: url(http://www.sf-express.com/resource/images/index/label-center-ul-btn-h.png)no-repeat -264px 0;
+     }
+     .last_foot li:hover{
+     	cursor: pointer;
+     	background: url(http://www.sf-express.com/resource/images/index/label-center-ul-btn.png)no-repeat -264px 0;
+     }
+     .end{
+     	color: white;
+     	margin-top: 25px
+     }
+     .end li{
+     	float: left;
+     	border-right: 1px solid #333;
+     	color: #fff;
+     	font-size: 14px;
+     	padding: 0 10px
+     }
+     .end li:hover{
+     	cursor: pointer;
+     }
+</style>
+<script type="text/javascript" src="../app/baidu.js"></script>
+</head>
+
+<body>
+	<header class="head">
+        <img class="head_pic1" src="http://www.sf-express.com/resource/images/index/sf.png">
+        <ul class="header_ul1">
+           <li>首页</li>
+           <li>物流</li>
+           <li>金融</li>
+           <li>商业</li>
+           <li>成功案例</li>
+           <li>服务支持</li>
+           <li>顺丰控股投资者关系</li>
+           <li>关于我们</li>
+        </ul>
+        <ul class="header_ul2">
+           <li><img src="http://www.sf-express.com/resource/images/index/sf.png" class="header_ul2_1">95338</li>
+           <li><img src="http://www.sf-express.com/resource/images/index/sf.png" class="header_ul2_1">会员登录| 会员注册</li>
+           <li><img src="http://www.sf-express.com/resource/images/index/sf.png" class="header_ul2_1">返回旧版网站</li>
+        </ul>
+	</header>
+	<div class="cycle_wrap">
+    <div class="cycle" id="cycle">
+        <div class="cycle_pic">
+            <img src="http://www.sf-express.com/.gallery/custom_promotion/lengyun1349.jpg">
+        </div>
+        <div class="cycle_pic">
+            <img src="http://www.sf-express.com/.gallery/other/24Hbanner-1349-487.jpg">
+        </div>
+        <div class="cycle_pic">
+            <img src="http://www.sf-express.com/.gallery/notice/b1349X487.jpg">
+        </div>
+        <div class="cycle_pic">
+            <img src="http://www.sf-express.com/.gallery/custom_promotion/lengyun1349.jpg">
+        </div>
+        <div class="cycle_pic">
+            <img src="http://www.sf-express.com/.gallery/other/24Hbanner-1349-487.jpg">
+        </div>
+    </div>
+    </div>
+    <button id="btn">123</button>
+    <div class="content_list">
+        <ul>
+            <li><span class="content_list_1"></span>运单跟踪</li>
+            <li><span class="content_list_2"></span>我要寄件</li>
+            <li><span class="content_list_3"></span>运费时效查询</li>
+            <li><span class="content_list_4"></span>服务网点查询</li>
+            <li><span class="content_list_5"></span>收寄范围查询</li>
+            <li><span class="content_list_6"></span>在线客服</li>
+        </ul>
+    </div>
+    <div class="middle_pic">
+        <a href="javascript::">查看全部&gt</a>
+        <img class="middle_pic1" src="http://www.sf-express.com/resource/images/index/case-shareBg.jpg">
+        <div class="middle_text">
+             <div class="middle_text1">
+                <h1>成功案例</h1>
+                <p>每一时刻，都有无数的客户托付与期待被成功交付，顺丰与前瞻者同行，与成就者共成就</p>
+             </div>
+             
+        </div>
+        <div class="middle_text2">
+                <div class="mt_1">
+                     <div>
+                          <span class="sp"></span>
+                          <p class="cc">3c电子行业</p>
+                     </div>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+        </div>
+    </div>
+    <div class="news">
+        <div class="news_one">
+               <h1>新闻资讯</h1>
+               <p>最快让您知晓，最全新闻资讯</p>
+               <a href="javascript::">查看全部&gt</a>
+        </div>
+        <div class="news_two">
+               <a class="news_a" href="javascript::">
+                   <img src="http://www.sf-express.com/.gallery/news/qiaojiao310.jpg" style="width: 300px">
+                   <h1>侨商云集第三届侨交会 顺丰助推跨境电商发展大势</h1>
+                   <p>8月13日至15日，第三届华人华侨<span>[详情]</span></p>
+               </a>
+               <a class="news_a" href="javascript::"></a>
+               <a class="news_a" href="javascript::"></a>
+               <a class="news_a" href="javascript::"></a>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="foot_wrap">
+               <div class="foot_div">
+                     <ul class="foot_1">
+                        <li class="list_a_1">物流</li>
+                        <li class="list_a_2">快递服务</li>
+                        <li class="list_a_3">冷运服务</li>
+                        <li class="list_a_4">仓储服务</li>
+                     </ul>
+                     <ul class="foot_2">
+                        <li class="list_a_1">金融</li>
+                        <li class="list_a_2">财富管理</li>
+                        <li class="list_a_3">资产管理</li>
+                        <li class="list_a_4">综合支付</li>
+                     </ul>
+                     <ul class="foot_3">
+                        <li class="list_a_1">金融</li>
+                        <li class="list_a_2">财富管理</li>
+                        <li class="list_a_3">资产管理</li>
+                        <li class="list_a_4">综合支付</li>
+                     </ul>
+
+                     <ul class="foot_4">
+                        <li class="list_a_1">金融</li>
+                        <li class="list_a_2">财富管理</li>
+                        <li class="list_a_3">资产管理</li>
+                        <li class="list_a_4">综合支付</li>
+                     </ul>
+                     <ul class="foot_5">
+                        <li class="list_a_1">金融</li>
+                        <li class="list_a_2">财富管理</li>
+                        <li class="list_a_3">资产管理</li>
+                        <li class="list_a_4">综合支付</li>
+                     </ul>
+                     <ul class="foot_6">
+                        <li class="list_a_1">金融</li>
+                        <li class="list_a_2">财富管理</li>
+                        <li class="list_a_3">资产管理</li>
+                        <li class="list_a_4">综合支付</li>
+                     </ul>
+                     <ul class="foot_7">
+                        <li class="list_a_1">金融</li>
+                        <li class="list_a_2">财富管理</li>
+                        <li class="list_a_3">资产管理</li>
+                        <li class="list_a_4">综合支付</li>
+                     </ul>
+                     <ul class="foot_8">
+                        <li class="list_a_1">金融</li>
+                        <li class="list_a_2">财富管理</li>
+                        <li class="list_a_3">资产管理</li>
+                        <li class="list_a_4">综合支付</li>
+                     </ul>
+                     <div class="list_div">
+                        <h1>马上联系我们</h1>
+                        <div class="list_div2"></div>
+                     </div>
+               </div>
+        <div class="last_foot">
+               <ul>
+                     <li last_1></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+               </ul> 
+        </div>
+        <ul class="end">
+               <li>使用条款</li>
+               <li>服务网络</li>
+               <li>集团采购</li>
+               <li>枫桥品台</li>
+               <li>隐私政策</li>
+        </ul>
+        </div>
+    </div>
+</body>
+
+</html>
